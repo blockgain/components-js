@@ -1,14 +1,9 @@
 {
-  "name": "@livekit/components-vue",
-  "version": "0.1.0",
+  "name": "@blockgain/components-vue",
+  "version": "0.1.1",
   "type": "module",
   "license": "Apache-2.0",
-  "author": "LiveKit",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/livekit/components-js.git",
-    "directory": "/packages/vue"
-  },
+  "author": "Blockgain",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -32,17 +27,18 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
+    "prepare": "vite build",
     "lint": "eslint -f unix \"src/**/*.{ts,vue}\"",
     "test": "vitest --run",
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@livekit/components-core": "workspace:*",
-    "@livekit/components-styles": "workspace:*",
+    "@livekit/components-core": "^0.12.10",
+    "@livekit/components-styles": "^1.1.6",
     "rxjs": "7.8.2"
   },
   "peerDependencies": {
-    "livekit-client": "catalog:",
+    "livekit-client": "^2.0.0",
     "vue": "^3.3.0"
   },
   "devDependencies": {
@@ -55,5 +51,11 @@
     "vite-plugin-dts": "^4.2.3",
     "vitest": "^3.0.0",
     "vue-tsc": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
