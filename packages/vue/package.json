@@ -1,6 +1,6 @@
 {
-  "name": "@blockgain/components-vue",
-  "version": "0.1.1",
+  "name": "@blockgain/livekit-vue",
+  "version": "0.1.0",
   "type": "module",
   "license": "Apache-2.0",
   "author": "Blockgain",

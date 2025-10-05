@@ -5,9 +5,9 @@ Vue 3 components for building LiveKit applications.
 ## Installation
 
 ```bash
-npm install @livekit/components-vue livekit-client
+npm install @blockgain/livekit-vue livekit-client
 # or
-pnpm add @livekit/components-vue livekit-client
+pnpm add @blockgain/livekit-vue livekit-client
 ```
 
 ## Quick Start
