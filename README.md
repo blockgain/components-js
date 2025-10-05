@@ -13,7 +13,9 @@
 </h1>
 
 <!--BEGIN_DESCRIPTION-->
-Use this SDK to add realtime video, audio and data features to your React app. By connecting to <a href="https://livekit.io/">LiveKit</a> Cloud or a self-hosted server, you can quickly build applications such as multi-modal AI, live streaming, or video calls with just a few lines of code.
+
+Use this SDK to add realtime video, audio and data features to your React or Vue app. By connecting to <a href="https://livekit.io/">LiveKit</a> Cloud or a self-hosted server, you can quickly build applications such as multi-modal AI, live streaming, or video calls with just a few lines of code.
+
 <!--END_DESCRIPTION-->
 
 <br/>
@@ -22,6 +24,8 @@ Use this SDK to add realtime video, audio and data features to your React app. B
 ![LiveKit Components Preview](./.github/assets/livekit-meet.jpg)
 
 ## Quick Start
+
+### React
 
 First add the library to your project:
 
@@ -46,13 +50,45 @@ export default function Example() {
 }
 ```
 
+### Vue 3
+
+First add the library to your project:
+
+```shell
+npm i @livekit/components-vue
+```
+
+Then use any of our pre-fabricated or helper components:
+
+```vue
+<template>
+  <LiveKitRoom :token="TOKEN" :server-url="WS_URL" :connect="true">
+    <VideoConference />
+  </LiveKitRoom>
+</template>
+
+<script setup lang="ts">
+import { LiveKitRoom, VideoConference } from '@livekit/components-vue';
+import '@livekit/components-styles';
+
+const TOKEN = 'generated-jwt';
+const WS_URL = 'wss://my-livekit-server';
+</script>
+```
+
 ## Docs
 
-For more information checkout the [LiveKit Components Docs](https://docs.livekit.io/reference/components/react/)
+- **React Components:** [LiveKit Components Docs](https://docs.livekit.io/reference/components/react/)
+- **Vue Components:** See [packages/vue/README.md](./packages/vue/README.md)
 
 ## Examples
 
-There are some basic examples of how to use and customize LiveKit components in this mono repo. They are located in the nextjs examples folder [`/examples/nextjs`](./examples/nextjs/). In order to set the examples up locally follow the [Development Setup](#development-setup).
+There are examples of how to use and customize LiveKit components in this mono repo:
+
+- **React/Next.js examples:** [`/examples/nextjs`](./examples/nextjs/)
+- **Vue 3 examples:** [`/examples/vue`](./examples/vue/)
+
+To run the examples locally, follow the [Development Setup](#development-setup).
 
 We also have a fully featured video conferencing application built on top of LiveKit Components. Start a video conference at [meet.livekit.io](https://meet.livekit.io) and take a look at the implementation in the [livekit-examples/meet](https://github.com/livekit-examples/meet) repo.
 
@@ -127,7 +163,9 @@ The highest priority is currently to get the core and react packages to a stable
 
 <!--NAV_END-->
 <!--BEGIN_REPO_NAV-->
+
 <br/><table>
+
 <thead><tr><th colspan="2">LiveKit Ecosystem</th></tr></thead>
 <tbody>
 <tr><td>LiveKit SDKs</td><td><a href="https://github.com/livekit/client-sdk-js">Browser</a> · <a href="https://github.com/livekit/client-sdk-swift">iOS/macOS/visionOS</a> · <a href="https://github.com/livekit/client-sdk-android">Android</a> · <a href="https://github.com/livekit/client-sdk-flutter">Flutter</a> · <a href="https://github.com/livekit/client-sdk-react-native">React Native</a> · <a href="https://github.com/livekit/rust-sdks">Rust</a> · <a href="https://github.com/livekit/node-sdks">Node.js</a> · <a href="https://github.com/livekit/python-sdks">Python</a> · <a href="https://github.com/livekit/client-sdk-unity">Unity</a> · <a href="https://github.com/livekit/client-sdk-unity-web">Unity (WebGL)</a> · <a href="https://github.com/livekit/client-sdk-esp32">ESP32</a></td></tr><tr></tr>
@@ -139,5 +177,3 @@ The highest priority is currently to get the core and react packages to a stable
 </tbody>
 </table>
 <!--END_REPO_NAV-->
-
-

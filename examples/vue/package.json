@@ -1,0 +1,26 @@
+{
+  "name": "@livekit/component-example-vue",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:check": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@livekit/components-styles": "workspace:*",
+    "@livekit/components-vue": "workspace:*",
+    "@vueuse/core": "^13.9.0",
+    "livekit-client": "catalog:",
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "vue-tsc": "^3.1.0"
+  }
+}
